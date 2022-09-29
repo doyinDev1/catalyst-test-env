@@ -5,6 +5,22 @@
   margin: 0;
   font-family: "Aoniek Regular";
 }
+*::-webkit-scrollbar{
+  display: none;
+}
+:root {
+  --color-black: #000000;
+  --color-grey: #9B9B9B;
+  --color-lightGrey: #F1F1F1;
+  --color-white: #ffffff;
+  --color-lightRed: #FFEBEB;
+  --color-red: #FD1212;
+  --color-brown: #796D05;
+  --color-yellow: #FFFEE3;
+  --color-purple: #5D5BB5;
+  --color-bg: #F5F5F5;
+
+}
 
 @font-face {
   font-family: "Aoniek Bold";
@@ -20,4 +36,7 @@
 @font-face {
   font-family: "Aoniek Regular";
   src: url(./assets/fonts/AeonikTRIAL-Regular.otf);
+}
+h1, h2, h3, h4, h5, h6,  p{
+  margin-bottom: 0em !important ;
 }
