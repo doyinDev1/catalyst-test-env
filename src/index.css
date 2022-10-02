@@ -5,9 +5,11 @@
   margin: 0;
   font-family: "Aoniek Regular";
 }
-*::-webkit-scrollbar{
+
+*::-webkit-scrollbar {
   display: none;
 }
+
 :root {
   --color-black: #000000;
   --color-grey: #9B9B9B;
@@ -37,6 +39,37 @@
   font-family: "Aoniek Regular";
   src: url(./assets/fonts/AeonikTRIAL-Regular.otf);
 }
-h1, h2, h3, h4, h5, h6,  p{
-  margin-bottom: 0em !important ;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 0em !important;
+}
+
+
+/* OVERRIDE ANT DESIGN  */
+.ant-input-affix-wrapper-lg,
+.ant-input-affix-wrapper>input.ant-input {
+  background-color: transparent !important;
+  border-radius: 8px !important;
+  padding-top: 0.4rem !important;
+  padding-bottom: 0.4rem !important;
+}
+
+.ant-input::placeholder {
+  font-size: 1rem !important;
+}
+
+.anticon svg {
+  color: var(--color-grey) !important;
+}
+
+.ant-select {
+  width: 8vw !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
