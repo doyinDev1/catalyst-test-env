@@ -37,7 +37,7 @@
 
 .dashline {
     grid-column-start: 3;
-    grid-column-end: 16;
+    grid-column-end: 17;
     border: 0.5px solid #E3E3E3;
 
 
@@ -46,7 +46,7 @@
 
 .dashboardPerformance {
     grid-column-start: 3;
-    grid-column-end: 16;
+    grid-column-end: 17;
     padding-top: 1.5rem;
     font-style: normal;
     font-weight: 400;
@@ -57,7 +57,7 @@
 
 .performanceStats {
     grid-column-start: 3;
-    grid-column-end: 16;
+    grid-column-end: 17;
     background-color: var(--color-white);
     border-radius: 15px;
 

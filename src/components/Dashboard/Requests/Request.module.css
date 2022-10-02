@@ -1,0 +1,65 @@
+.request {
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    padding-top: 4.625rem;
+    padding-bottom: 1.5rem;
+}
+
+.RequestTop {
+    grid-column-start: 3;
+    grid-column-end: 17;
+}
+
+.RequestTopSub {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+
+}
+.RequestTopHead h1{
+    font-size: 20px;
+
+}
+
+.RequestTopHead:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.RequestTopHead:nth-child(2) {
+    grid-column-start: 3;
+    grid-column-end: 7;
+}
+
+.RequestTopHead:nth-child(3) {
+    grid-column-start: 10;
+    grid-column-end: 13;
+}
+.RequestTopHead:nth-child(2) svg{
+    font-size: 1.5rem;
+}
+
+.RequestDateSelect {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #D8D6D6;
+    border-radius: 4px;
+    padding: 0.2rem;
+}
+
+.RequestDate svg {
+    color: var(--color-black) !important;
+}
+
+.RequestDate {
+    display: flex;
+    align-items: center;
+
+}
+.RequestDate p{
+    font-size: 0.8rem;
+}
+.RequestSelect{
+    border-left: 1px solid var(--color-grey);
+}
