@@ -69,7 +69,91 @@ p {
 }
 
 .ant-select {
-  width: 8vw !important;
+  width: 7vw !important;
   outline: none !important;
   box-shadow: none !important;
+}
+
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
+  border-color: var(--color-grey) !important;
+  box-shadow: 0 0 0 1px rgba(99, 99, 99, 0.2);
+}
+
+.ant-input-affix-wrapper-focused {
+  border-color: var(--color-grey) !important;
+  box-shadow: 0 0 0 1px rgba(99, 99, 99, 0.2);
+
+}
+/* TAB STYLING ANT DESIGN */
+.ant-tabs-tab {
+font-size: 16px !important;
+}
+.ant-tabs-ink-bar {
+  background: var(--color-purple) !important;
+}
+.ant-tabs-tab-active{
+  color: var(--color-purple) !important;
+
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn, .ant-tabs-tab-btn:focus, .ant-tabs-tab:hover{
+  color: var(--color-purple) !important;
+}
+@media screen and (max-width: 1440px) {
+
+  .ant-select {
+    outline: none !important;
+    box-shadow: none !important;
+    font-size: 0.7rem !important;
+  }
+
+  .ant-input::placeholder {
+    font-size: 14px !important;
+  }
+
+}
+
+@media screen and (max-width: 1280px) {
+  .ant-select {
+    width: 9vw !important;
+
+    font-size: 0.7rem !important;
+  }
+
+  .ant-select-item-option-content {
+    font-size: 0.6rem !important;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  .ant-select {
+    width: 10.8vw !important;
+    font-size: 0.6rem !important;
+
+  }
+  .ant-input-affix-wrapper-lg {
+    padding: 4.5px 5px !important;
+
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .ant-input::placeholder  {
+  font-size: 12px !important;
+  }
+}
+@media screen and (max-width: 570px) {
+  .ant-select {
+    width: 20.8vw !important;
+    font-size: 0.6rem !important;
+
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .ant-select {
+    width: 25.8vw !important;
+    font-size: 0.6rem !important;
+
+  }
 }
