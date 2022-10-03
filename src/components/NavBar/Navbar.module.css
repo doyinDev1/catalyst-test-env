@@ -45,7 +45,15 @@
     font-weight: 400;
     font-size: 1rem;
 }
-
+@media screen and (max-width: 1440px) {
+    .right h1 {
+        font-size: 1rem;
+        
+    }
+    .right p {
+        font-size: 0.8rem;
+    }
+}
 
 @media screen and (max-width: 1280px) {
     .right h1 {
