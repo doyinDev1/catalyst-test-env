@@ -1,5 +1,5 @@
 .dashboard {
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
     background-color: var(--color-bg);
     padding-top: 2rem;
@@ -16,7 +16,7 @@
     grid-column-start: 3;
     display: flex;
     gap: 1.75rem;
-    grid-column-end: 10;
+    grid-column-end: 16;
     align-items: center;
     padding-bottom: 2.25rem;
 
@@ -145,4 +145,91 @@
 
 .performanceText:nth-child(6) svg {
     visibility: hidden;
+}
+
+@media screen and (max-width: 1440px) {
+    .dashboardTitle h1 {
+        font-size: 1.5rem;
+    }
+
+    .dashboardPerformance {
+        font-size: 18px;
+    }
+
+    .performanceText h1 {
+        font-size: 16px;
+    }
+
+    .performanceTextImg p {
+        font-size: 22px;
+    }
+
+    .performanceTextImg {
+        padding-top: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .dashboardTitle h1 {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .dashboardPerformance {
+        font-size: 16px;
+    }
+
+    .performanceText h1 {
+        font-size: 14px;
+    }
+
+    .performanceTextImg p {
+        font-size: 18px;
+    }
+
+    .performanceTextImg {
+        padding-bottom: 2.3rem;
+        /* padding-top: 0.5rem; */
+    }
+
+}
+
+@media screen and (max-width: 570px) {
+    .dashboardTitle h1 {
+        font-size: 1.1rem;
+    }
+
+    .dashboardTitle {
+        gap: 1rem;
+    }
+
+    .performanceText h1 {
+        font-size: 12px;
+    }
+
+    .performanceTextImg p {
+        font-size: 16px;
+    }
+
+
+    .performanceStats svg {
+        height: 16px;
+        width: 20px;
+
+    }
+
+    .performanceTextImg {
+        gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .dashboard svg {
+        display: none;
+    }
+
+    .performanceText h1 {
+        font-size: 10px;
+    }
 }
