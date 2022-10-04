@@ -4,8 +4,6 @@ import { ReactComponent as DashboardMenu } from '../../assets/images/dashboardMe
 import { ReactComponent as GreenBox } from '../../assets/images/box-add.svg'
 import { ReactComponent as CustomerBox } from '../../assets/images/profile-user.svg'
 import { ReactComponent as CreditBox } from '../../assets/images/moneys.svg'
-import Request from '../Dashboard/Requests/Request'
-// import { Space, Spin } from 'antd';
 
 const Dashboard = () => {
     return (
@@ -71,7 +69,6 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
-            {/* <Request /> */}
         </div>
     )
 }

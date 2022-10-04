@@ -14,7 +14,9 @@
     grid-template-columns: repeat(18, 1fr);
     display: grid;
     padding-top: 1.68rem;
-    height: 100vh;
+    /* height: 100vh; */
+    padding-bottom: 4rem;
+
 
 }
 
@@ -97,6 +99,16 @@
 
 }
 
+.tabIcons {
+    display: flex;
+    align-items: center;
+}
+
+.tabIcons h6 {
+    font-size: 15px;
+    color: var(--color-grey);
+}
+
 .tabIcons svg {
     margin-right: 8px;
 }
@@ -118,6 +130,11 @@
     .RequestTopHead h1 {
         font-size: 18px;
 
+    }
+
+    .requestBottomTab {
+        padding-top: 12px;
+        padding-left: 35px;
     }
 
 }
