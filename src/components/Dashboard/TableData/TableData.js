@@ -1,10 +1,13 @@
 import { Table } from 'antd';
 import qs from 'qs';
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import classes from './TableData.module.css'
-
+import { ReactComponent as YellowEllipse } from '../../../assets/images/Ellipse 228.svg'
+// import { ReactComponent as GreenEllipse } from '../../../assets/images/Ellipse 229.svg'
+// import { ReactComponent as RedEllipse } from '../../../assets/images/Ellipse 230.svg'
 const TableData = (props) => {
+  const navigate = useNavigate()
   const columns = [
     // {
     //   title: 'Date',
@@ -17,39 +20,58 @@ const TableData = (props) => {
     //   width: '20%',
     // },
     {
-      title: 'Date',
+      title: <h1 className={classes.header}>Date</h1>,
       // dataIndex: 'cell',
-      width: '10%',
-      render: (id) => <a className={classes.colll}>
-      <Link to={`/dashboard/customer${id.cell}`}>{props.date}</Link>
-      {/* {console.log(id)} */}
-    </a>
+      width: '12%',
+      render: (id) => <div className={classes.text}>
+        <h1>18/02/22</h1>
+        <p>10:28 AM</p>
+      </div>
     },
     {
-      title: 'Application No',
-      dataIndex: 'cell',
-      width: '10%',
+      title: <h1 className={classes.header}>Application No</h1>,
+
+      // dataIndex: 'cell',
+      render: (id) => <div className={classes.application}>
+        <YellowEllipse />
+        {console.log(id)}
+        <h1>{id.phone}</h1>
+      </div>,
+      width: '17%',
     },
     {
-      title: 'Amount',
-      dataIndex: 'gender',
-      width: '15%',
+      title: <h1 className={classes.header}>Amount</h1>,
+      // dataIndex: 'gender',
+      render: (id) => <div className={classes.text}>
+        <h1>N3000.00</h1>
+      </div>,
+      width: '19%',
     },
     {
-      title: 'Vendor',
-      dataIndex: 'gender',
-      width: '20%',
+      title: <h1 className={classes.header}>Vendor</h1>,
+      // dataIndex: 'gender',
+      render: (id) => <div className={classes.text}>
+        <h1>{id.id.name}</h1>
+      </div>,
+      width: '13%',
     },
     {
-      title: 'Customer',
-      dataIndex: 'email',
-      width: '20%',
+      title: <h1 className={classes.header}>Customer</h1>,
+      // dataIndex: 'email',
+      render: (id) => <div className={classes.customer}>
+        <h1>{id.name.first} {id.name.last}</h1>
+        <button>E</button>
+      </div>,
+      width: '19%',
 
     },
     {
-      title: 'Site',
-      dataIndex: 'email',
-      width: '20%',
+      title: <h1 className={classes.header}>Site</h1>,
+      // dataIndex: 'email',
+      render: (id) => <div className={classes.text}>
+        <h1>Chalenge</h1>
+      </div>,
+      width: '16%',
 
     },
   ];
@@ -67,8 +89,8 @@ const TableData = (props) => {
       current: 1,
       pageSize: 10,
     },
-   
-    
+
+
   });
 
 
@@ -80,7 +102,7 @@ const TableData = (props) => {
       .then((res) => res.json())
       .then(({ results }) => {
         setData(results);
-        console.log(results)
+        // console.log(results)
         setLoading(false);
         setTableParams({
           ...tableParams,
@@ -107,7 +129,7 @@ const TableData = (props) => {
   return (
     <div>
 
-{/* {console.log(props)} */}
+      {/* {console.log(props)} */}
 
       <Table
         columns={columns}
@@ -116,6 +138,15 @@ const TableData = (props) => {
         pagination={tableParams.pagination}
         loading={loading}
         onChange={handleTableChange}
+        onRow={(record, rowIndex) => {
+          return {
+            onClick: event => {
+              // console.log(record, 'hjhhj')
+              navigate(`/dashboard/customer${record.phone}`)
+            }, 
+        
+          };
+        }}
       />
     </div>
   )

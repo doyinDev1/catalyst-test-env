@@ -54,14 +54,15 @@ export const customerDetails = {
     creditScore: 'E',
     dateOfBirth: '02/04/1994',
     gender: 'Female',
-    religion: 'christianity',
+    religion: 'Christianity',
     IDType: "Driver's License",
-    LGA: 'somulu',
-    stateOfOrign: 'Ekiki State',
+    LGA: 'Somulu',
+    stateOfOrign: 'Ekiti State',
     stateOfResidence: 'Lagos State',
     maritalStatus: 'Married',
     noOfDependents: 4,
     idNumber: '234567928274',
+    nameofBiz: 'GODISGOOD MOTORS'
 
 }
 

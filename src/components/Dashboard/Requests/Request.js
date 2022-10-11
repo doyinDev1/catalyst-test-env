@@ -79,7 +79,6 @@ const Request = () => {
                             {
                                 label: (
                                     <span className={classes.tabIcons}>
-
                                         Recent
                                     </span>
                                 ),
@@ -90,42 +89,36 @@ const Request = () => {
                                 label: (
                                     <span className={classes.tabIcons}>
                                         < GreenEllipse />
-
                                         Approved
                                     </span>
                                 ),
                                 key: '2',
                                 // children: <TableDataNew />,
                                 children: <TableData date={date} text={text} />,
-
                             },
                             {
                                 label:
                                     (
                                         <span className={classes.tabIcons}>
                                             < YellowEllipse />
-
                                             Pending
                                         </span>
                                     ),
                                 key: '3',
                                 // children: `Content of Tab Pane 3`,
                                 children: <TableData date={date}  text={text}/>,
-
                             },
                             {
                                 label:
                                     (
                                         <span className={classes.tabIcons}>
                                             < RedEllipse />
-
                                             Rejected
                                         </span>
                                     ),
                                 key: '4',
                                 // children: `Content of Tab Pane 4`,
                                 children: <TableData date={date} />,
-
                             },
                         ]}
                     />

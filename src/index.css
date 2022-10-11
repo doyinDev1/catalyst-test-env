@@ -24,6 +24,8 @@
   --color-green: #26B602;
   --color-lightGreen: #F3FFF0;
   --color-pink: #FFF2F2;
+  --color-offwhite: #FFFFF4;
+  --color-blue: #2C4CB1;
 }
 
 @font-face {
@@ -174,6 +176,7 @@ p {
 
   .ant-table table {
     table-layout: fixed !important;
+
   }
 
   .ant-table-thead>tr>th {
@@ -182,7 +185,7 @@ p {
 
   .ant-table-tbody>tr>td {
     font-size: 7px !important;
-
+    cursor: pointer !important;
   }
 
 }
