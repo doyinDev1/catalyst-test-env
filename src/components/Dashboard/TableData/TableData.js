@@ -34,7 +34,7 @@ const TableData = (props) => {
       // dataIndex: 'cell',
       render: (id) => <div className={classes.application}>
         <YellowEllipse />
-        {console.log(id)}
+        {/* {console.log(id)} */}
         <h1>{id.phone}</h1>
       </div>,
       width: '17%',

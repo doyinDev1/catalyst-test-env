@@ -3,9 +3,13 @@ import RequestDetails from "./components/RequestDetails/RequestDetails";
 import Home from './Home'
 import { useEffect } from "react";
 function App() {
-  useEffect(()=>{
-    window.scrollTo(0, 0)
+
+
+  useEffect(() => {
+    window.scrollTo(0, 78)
   })
+
+
   return (
     <div className="App">
       <Router>

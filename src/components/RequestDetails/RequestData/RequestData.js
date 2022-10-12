@@ -10,7 +10,8 @@ import { ReactComponent as TickIcon } from '../../../assets/images/tick-circle.s
 import { ReactComponent as CancelIcon } from '../../../assets/images/close-circle.svg'
 
 import { ReactComponent as DocIcon } from '../../../assets/images/DOCX.svg'
-
+import bank from '../../../assets/images/bank.png'
+import bank2 from '../../../assets/images/bank2.jpg'
 
 
 
@@ -54,7 +55,7 @@ const RequestData = () => {
             </div>
             <div className={classes.requestDataHeaderText}>
 
-              <h1>Customer Credit Sore</h1>
+              <h1>Customer Credit Score</h1>
               <button className={classes.customerClass}>E</button>
             </div>
             <div className={classes.requestDataHeaderText}>
@@ -229,16 +230,16 @@ const RequestData = () => {
         </div>
       </div>
       {/* CREDIT CHECK BUTTON */}
-      <div className={classes.requestDataGrid}>
+      {/* <div className={classes.requestDataGrid}>
 
         <button
           className={classes.creditCheck}
         >Credit Check</button>
 
-      </div>
+      </div> */}
 
       {/* VIEW RESULT BUTTON */}
-      <div
+      {/* <div
         className={classes.viewCreditMain}
       >
 
@@ -256,9 +257,9 @@ const RequestData = () => {
           </div>
 
         </div>
-      </div>
+      </div> */}
       {/* APPROVED CHECK */}
-      <div className={classes.requestDataGrid}>
+      {/* <div className={classes.requestDataGrid}>
         <div className={classes.approveDiv}>
 
           <button
@@ -266,10 +267,10 @@ const RequestData = () => {
           > <CheckCircleOutlined /> Approved</button>
         </div>
 
-      </div>
+      </div> */}
 
       {/* DECLINED CHECK */}
-      <div className={classes.requestDataGrid}>
+      {/* <div className={classes.requestDataGrid}>
         <div className={classes.approveDiv}>
 
           <button
@@ -277,16 +278,93 @@ const RequestData = () => {
           > <CloseCircleOutlined /> Declined</button>
         </div>
 
+      </div> */}
+
+      {/* Guarantor Details Div */}
+
+
+
+      <div className={classes.requestDataGrid}>
+        <h1 className={classes.customerdetail}>Guarantor Details</h1>
+        <h1 className={classes.customerdetail}>Invoice</h1>
+
       </div>
 
 
-      {/* <div className={classes.requestDataGrid}>
-        <div
-          className={classes.guarantorDiv}
-        >ssdsds
-        </div>
-      </div> */}
+      <div className={classes.requestDataGrid}>
+        <div className={classes.guarantorMain}>
 
+          <div
+            className={classes.guarantorDiv}
+          >
+            <div
+              className={classes.guarantorDivLeft}
+            >
+              <div
+                className={classes.guarantorDivText}
+
+              >
+                <div className={classes.guarantorDivTextGrid}>
+
+                  <h1 className={classes.guarantorDivTextChild}>Name</h1>
+                  <h1 className={classes.guarantorDivTextChild}>Onyeka Onwenu</h1>
+                </div>
+              </div>
+              <div
+                className={classes.guarantorDivText}
+
+              >
+                <div className={classes.guarantorDivTextGrid}>
+
+                  <h1 className={classes.guarantorDivTextChild}>Email</h1>
+                  <h1 className={`${classes.guarantorDivTextChild} ${classes.linked}`}>Onyeka.Onwenu@gmail.com</h1>
+                </div>
+              </div>
+              <div
+                className={classes.guarantorDivText}
+
+              >
+                <div className={classes.guarantorDivTextGrid}>
+
+                  <h1 className={classes.guarantorDivTextChild}>Phone Number</h1>
+                  <h1 className={classes.guarantorDivTextChild}>08102471224</h1>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div
+            className={classes.guarantorDiv}
+          >
+            <div
+              className={classes.guarantorDivRight}
+            >
+              <div
+                className={classes.guarantorInvoice}
+
+              >
+               
+
+                <DocIcon
+                  className={classes.guarantorInvChild}
+                />
+                <h1 className={classes.guarantorInvChild}
+                >IMG 2332.jpg</h1>
+                <button className={classes.guarantorInvChild}
+                >View</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+      {/* VENDOR DETAILS */}
 
       <div className={classes.requestDataGrid}>
         <h1 className={classes.customerdetails}>Vendor Details</h1>
@@ -304,15 +382,15 @@ const RequestData = () => {
               <h1 className={classes.requestCustomerHeaderChild}>**************</h1>
 
             </div>
-          
+
             <div className={classes.requestCustomerHeaderContent}>
-              <h1 className={classes.requestCustomerHeaderChild}>Business Name</h1>
-              <h1 className={classes.requestCustomerHeaderChild}>{customer.phone}</h1>
+              <h1 className={classes.requestCustomerHeaderChild}>Bank Name</h1>
+              <h1 className={classes.requestCustomerHeaderChild}>Guarantee Trust Bank  <span> <img className={classes.bankImg} src={bank} alt="bank icon" /></span></h1>
               <h1 className={classes.requestCustomerHeaderChild}>Account Number</h1>
               <h1 className={classes.requestCustomerHeaderChild}>0145678893</h1>
             </div>
-         
-            
+
+
 
             <div className={classes.requestCustomerHeaderContent}>
               <h1 className={classes.requestCustomerHeaderChild}>Business Name</h1>
@@ -331,8 +409,8 @@ const RequestData = () => {
               <h1 className={classes.requestCustomerHeaderChild}>Phone Number 2</h1>
               <h1 className={classes.requestCustomerHeaderChild}>08098765562</h1>
             </div>
-          
-            
+
+
 
           </div>
 
@@ -340,6 +418,7 @@ const RequestData = () => {
 
       </div>
 
+      {/* APPROVE VENDOR APPLICATION */}
 
       <div className={classes.requestDataGrid}>
         <div className={classes.OutLine}>
@@ -353,10 +432,11 @@ const RequestData = () => {
 
         <div className={classes.requestDataGrid} >
 
-          
+
           <div
             className={classes.viewCreditIcons}
-            data-status={"lock-"}
+            // MAKE DIV GREY IF GUARANTOR HAVENT' BEEN APPROVED
+            data-status={"lock"}
           >
             <TickIcon />
 
@@ -368,8 +448,8 @@ const RequestData = () => {
 
 
 
-           {/* APPROVED CHECK */}
-           {/* <div className={classes.requestDataGrid}>
+      {/* APPROVED CHECK */}
+      {/* <div className={classes.requestDataGrid}>
         <div className={classes.approveDiv}>
 
           <button
@@ -389,7 +469,7 @@ const RequestData = () => {
         </div>
 
       </div> */}
-      
+
     </div>
   )
 }
