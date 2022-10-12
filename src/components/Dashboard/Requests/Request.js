@@ -6,10 +6,12 @@ import { today, getMonths, getSevenDays } from '../../../helpers/getDaysMonth'
 import { ReactComponent as YellowEllipse } from '../../../assets/images/Ellipse 228.svg'
 import { ReactComponent as GreenEllipse } from '../../../assets/images/Ellipse 229.svg'
 import { ReactComponent as RedEllipse } from '../../../assets/images/Ellipse 230.svg'
+import TableData from '../TableData/TableData';
+// eslint-disable-next-line no-unused-vars
+import TableDataNew from '../TableDataNew/TableDataNew';
 
 const Request = () => {
     const { Option } = Select;
-    // eslint-disable-next-line no-unused-vars
     const [text, setText] = useState('');
     // day function
     const getToday = today().toString().substring(4, 11)
@@ -68,22 +70,20 @@ const Request = () => {
             <div className={classes.requestBottom}>
                 <div className={classes.requestBottomTab}>
 
-
                     <Tabs
                         defaultActiveKey="1"
                         onChange={onChange}
-                        // size={'large'}
+                        size={'large'}
 
                         items={[
                             {
                                 label: (
                                     <span className={classes.tabIcons}>
-                                        {/* < GreenEllipse /> */}
                                         Recent
                                     </span>
                                 ),
                                 key: '1',
-                                children: `Content of Tab Pane 1`,
+                                children: <TableData date={date} text={text} />,
                             },
                             {
                                 label: (
@@ -93,29 +93,32 @@ const Request = () => {
                                     </span>
                                 ),
                                 key: '2',
-                                children: `Content of Tab Pane 2`,
+                                // children: <TableDataNew />,
+                                children: <TableData date={date} text={text} />,
                             },
                             {
-                                label: 
-                                (
-                                    <span className={classes.tabIcons}>
-                                        < YellowEllipse />
-                                       Pending
-                                    </span>
-                                ),
+                                label:
+                                    (
+                                        <span className={classes.tabIcons}>
+                                            < YellowEllipse />
+                                            Pending
+                                        </span>
+                                    ),
                                 key: '3',
-                                children: `Content of Tab Pane 3`,
+                                // children: `Content of Tab Pane 3`,
+                                children: <TableData date={date}  text={text}/>,
                             },
                             {
-                                label: 
-                                (
-                                    <span className={classes.tabIcons}>
-                                        < RedEllipse />
-                                       Rejected
-                                    </span>
-                                ),
+                                label:
+                                    (
+                                        <span className={classes.tabIcons}>
+                                            < RedEllipse />
+                                            Rejected
+                                        </span>
+                                    ),
                                 key: '4',
-                                children: `Content of Tab Pane 4`,
+                                // children: `Content of Tab Pane 4`,
+                                children: <TableData date={date} />,
                             },
                         ]}
                     />
