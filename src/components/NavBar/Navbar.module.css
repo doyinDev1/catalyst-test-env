@@ -25,7 +25,11 @@
 .avatar {
     display: flex;
     align-items: center;
-    gap: 1.1rem;
+    /* gap: 1.1rem; */
+}
+
+.avatar>*+* {
+    margin-left: 1.1rem;
 }
 
 .left h3 {
@@ -45,11 +49,13 @@
     font-weight: 400;
     font-size: 1rem;
 }
+
 @media screen and (max-width: 1440px) {
     .right h1 {
         font-size: 1rem;
-        
+
     }
+
     .right p {
         font-size: 0.8rem;
     }
@@ -70,8 +76,9 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .avatar {
-        gap: 0.5rem;
+
+    .avatar>*+* {
+        margin-left: 0.5rem;
     }
 
     .right h1 {

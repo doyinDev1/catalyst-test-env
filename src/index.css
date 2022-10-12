@@ -68,7 +68,7 @@ p {
 }
 
 .ant-input::placeholder {
-  font-size: 1rem !important;
+  font-size: 14px !important;
 }
 
 .anticon svg {
@@ -79,6 +79,7 @@ p {
   width: 7vw !important;
   outline: none !important;
   box-shadow: none !important;
+  /* font-size: 13px !important; */
 }
 
 .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover {
@@ -134,7 +135,7 @@ p {
   }
 
   .ant-input::placeholder {
-    font-size: 14px !important;
+    font-size: 12px !important;
   }
 
   .ant-tabs-large>.ant-tabs-nav .ant-tabs-tab {
@@ -146,7 +147,7 @@ p {
   .ant-select {
     width: 9vw !important;
 
-    font-size: 0.7rem !important;
+    font-size: 10px !important;
   }
 
   .ant-select-item-option-content {

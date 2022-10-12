@@ -15,12 +15,16 @@
 
     grid-column-start: 3;
     display: flex;
-    gap: 1.75rem;
+    /* gap: 1.75rem; */
     grid-column-end: 16;
     align-items: center;
     padding-bottom: 2.25rem;
 
 }
+.dashboardTitle > * + * {
+    margin-left: 1.75rem;
+   }
+
 
 .dashboard svg {
     width: 3rem;
@@ -30,7 +34,7 @@
 .dashboardTitle h1 {
     font-style: normal;
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 24px;
     font-family: "Aoniek Bold";
 
 }
@@ -50,7 +54,7 @@
     padding-top: 1.5rem;
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 1.68rem;
 
 }
@@ -89,22 +93,23 @@
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    /* font-family: "Aoniek Bold"; */
     color: var(--color-grey);
 }
 
 .performanceTextImg {
     display: flex;
-    gap: 1rem;
     padding-top: 1rem;
     align-items: center;
     padding-bottom: 3.3rem;
 }
+.performanceTextImg > * + * {
+    margin-left: 1rem;
+   }
 
 .performanceTextImg p {
     font-style: normal;
     font-weight: 700;
-    font-size: 26px;
+    font-size: 24px;
     color: var(--color-black);
 }
 
@@ -149,7 +154,7 @@
 
 @media screen and (max-width: 1440px) {
     .dashboardTitle h1 {
-        font-size: 1.5rem;
+        font-size: 21px;
     }
 
     .dashboardPerformance {
@@ -171,13 +176,13 @@
 
 @media screen and (max-width: 1280px) {
     .dashboardTitle h1 {
-        font-size: 1.3rem;
+        font-size: 19px;
     }
 }
 
 @media screen and (max-width: 1024px) {
     .dashboardPerformance {
-        font-size: 16px;
+        font-size: 19px;
     }
 
     .performanceText h1 {
@@ -190,20 +195,21 @@
 
     .performanceTextImg {
         padding-bottom: 2.3rem;
-        /* padding-top: 0.5rem; */
     }
 
 }
 
 @media screen and (max-width: 570px) {
     .dashboardTitle h1 {
-        font-size: 1.1rem;
+        font-size: 16px;
     }
 
-    .dashboardTitle {
+    /* .dashboardTitle {
         gap: 1rem;
-    }
-
+    } */
+.dashboardTitle > * + * {
+    margin-left: 1rem;
+   }
     .performanceText h1 {
         font-size: 12px;
     }
@@ -219,9 +225,12 @@
 
     }
 
-    .performanceTextImg {
+    /* .performanceTextImg {
         gap: 0.5rem;
-    }
+    } */
+    .performanceTextImg > * + * {
+        margin-left: 0.5rem;
+       }
 }
 
 @media screen and (max-width: 414px) {

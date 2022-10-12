@@ -1,7 +1,7 @@
 import { Table } from 'antd';
 import qs from 'qs';
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import classes from './TableData.module.css'
 import { ReactComponent as YellowEllipse } from '../../../assets/images/Ellipse 228.svg'
 // import { ReactComponent as GreenEllipse } from '../../../assets/images/Ellipse 229.svg'
@@ -12,11 +12,10 @@ const TableData = (props) => {
     // {
     //   title: 'Date',
     //   dataIndex: 'name',
-    //   // sorter: true,
+    //   sorter: true,
     //   render: (name) => <a className={classes.colll}>
-    //     `${name.first} ${name.last}`
-    //     <h1>hjhjhjh</h1>
-    //   </a>,
+    //     {name.first} {name.last}
+    //          </a>,
     //   width: '20%',
     // },
     {
@@ -32,6 +31,7 @@ const TableData = (props) => {
       title: <h1 className={classes.header}>Application No</h1>,
 
       // dataIndex: 'cell',
+      
       render: (id) => <div className={classes.application}>
         <YellowEllipse />
         {/* {console.log(id)} */}
@@ -58,6 +58,7 @@ const TableData = (props) => {
     {
       title: <h1 className={classes.header}>Customer</h1>,
       // dataIndex: 'email',
+
       render: (id) => <div className={classes.customer}>
         <h1>{id.name.first} {id.name.last}</h1>
         <button>E</button>
@@ -102,7 +103,7 @@ const TableData = (props) => {
       .then((res) => res.json())
       .then(({ results }) => {
         setData(results);
-        // console.log(results)
+        console.log(results)
         setLoading(false);
         setTableParams({
           ...tableParams,

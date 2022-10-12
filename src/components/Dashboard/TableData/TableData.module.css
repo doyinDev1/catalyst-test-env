@@ -24,10 +24,13 @@
 
 .application {
     display: flex;
-    gap: 1rem;
+    /* gap: 1rem; */
     align-items: center;
     cursor: pointer;
 }
+.application > * + * {
+    margin-left: 1rem;
+   }
 
 .application h1 {
     font-weight: 700;
@@ -38,9 +41,12 @@
 .customer {
     display: flex;
     align-items: center;
-    gap: 1rem;
     cursor: pointer;
 }
+.customer  > * + * {
+    margin-left: 1rem;
+   }
+
 
 .customer h1 {
     font-weight: 400;
